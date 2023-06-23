@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
@@ -8,8 +9,19 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static('public'))
 
+const { SERVER_PORT } = process.env
+
+
+
+const { 
+    addPlace
+} = require('./controller')
+
 app.get('/', (req,res) => {
     res.status(200).sendFile(path.join(__dirname, '../public/index.html'))
+    rollbar.info('User visited the site!')
 })
 
-app.listen(4000, console.log(`App running on 4000!`))
+app.post('/api/place', addPlace)
+
+app.listen(SERVER_PORT, console.log(`App running on ${SERVER_PORT}!`))

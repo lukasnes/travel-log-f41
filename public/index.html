@@ -14,8 +14,26 @@
         <img src="./images/globe.png" alt="Globe">
     </header>
 
+    <main>
+        <form id="wishlist-form">
+            <input id="wishlist-input" type="text" placeholder="Where do you want to go?">
+            <button>I wanna go here!</button>
+        </form>
+        <div id="section-container">
+            <section id="wishlist-section" class="list-section">
+                <h2>Places I want to see</h2>
+                <ul id="wishlist" class="place-list"></ul>
+            </section>
+            <section id="log-section" class="list-section">
+                <h2>Places I've been</h2>
+                <ul id="log" class="place-list"></ul>
+            </section>
+        </div>
+    </main>
+
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./utils.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
