@@ -1,0 +1,20 @@
+header {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: azure;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+h1{
+    color: darkblue;
+    font-size: xx-large;
+}
