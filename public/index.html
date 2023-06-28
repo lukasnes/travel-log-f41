@@ -9,15 +9,18 @@
 </head>
 <body>
     <header>
-        <img src="./images/globe.png" alt="Globe">
+        <img src="./images/globe.png" alt="Globe" class="globe-img">
         <h1>The Travel Log</h1>
-        <img src="./images/globe.png" alt="Globe">
+        <img src="./images/globe.png" alt="Globe" class="globe-img">
     </header>
 
     <main>
+        <div id="plane-container">
+            <img src="./images/plane.png" alt="Airplane" id="airplane">
+        </div>
         <form id="wishlist-form">
             <input id="wishlist-input" type="text" placeholder="Where do you want to go?">
-            <button>I wanna go here!</button>
+            <button id="wishlist-btn">Here!</button>
         </form>
         <div id="section-container">
             <section id="wishlist-section" class="list-section">
