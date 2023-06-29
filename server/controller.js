@@ -1,5 +1,5 @@
 require('dotenv').config()
-let places = []
+let places = require('./db.json')
 
 const { ROLLBAR_CODE } = process.env
 
@@ -13,9 +13,10 @@ const rollbar = new Rollbar({
 rollbar.log('Hello world!')
 
 module.exports = {
+    getPlaces: (req,res) => {
+      res.status(200).send(places)
+    },
     addPlace: (req,res) => {
-        rollbar.info(`User added a new place by the name of ${req.body.place}`)
-        places.push(req.body)
-        res.status(200).send(places)
+
     }
 }

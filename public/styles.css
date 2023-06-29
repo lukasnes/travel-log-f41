@@ -14,7 +14,7 @@ body{
    overflow-x: hidden; 
 }
 
-header {
+#site-header {
     position: sticky;
     top: 0;
     box-sizing: border-box;
@@ -91,18 +91,16 @@ main {
     animation-duration: 10s;
 }
 
-#wishlist-form {
-    height: 50px;
+.modal-form {
     padding: 10px;
-    position: sticky;
-    top: calc(100px + var(--header-height));
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
 }
 
-#wishlist-input{
+.input-field{
     height: 30px;
     background-color: var(--light-blue);
     border: 3px solid var(--darkest-blue);
@@ -111,7 +109,32 @@ main {
     color: var(--dark-blue);
 }
 
-#wishlist-btn {
+.form-label{
+    border: 3px solid var(--darkest-blue);
+    background-color: var(--lightest-blue);
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.select-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#modal-btns-container{
+    position: sticky;
+    top: calc(100px + var(--header-height));
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn {
     background-color: var(--light-blue);
     border: 1px solid var(--dark-blue);
     border-radius: 50px;
@@ -119,7 +142,7 @@ main {
     box-shadow: 3px 3px var(--darkest-blue);
 }
 
-#wishlist-btn:hover{
+.btn:hover{
     cursor: pointer;
     box-shadow: 1px 1px var(--darkest-blue);
     transition: 250ms;
@@ -136,4 +159,67 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+}
+.place-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#modal {
+    position: absolute;
+    top: calc(50vh - 250px);
+    left: calc(50vw - 250px);
+    display: none;
+    width: 500px;
+    height: 500px;
+    border: 3px solid var(--darkest-blue);
+    border-radius: 25px;
+    background-color: var(--medium);
+}
+
+#exit-modal{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Places */
+
+.place-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid var(--darkest-blue);
+    border-radius: 25px;
+    background-color: var(--medium-light);
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+}
+.country-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: calc(100% + 30px);
+    padding: 5px;
+    background-color: var(--darkest-blue);
+}
+.flag-img{
+    width: 50px;
+    height: 40px;
+}
+.country-name{
+    font-size: 1.5em;
+}
+.visit-description{
+    background-color: var(--medium);
+    border: 1px solid var(--medium-dark);
+    padding: 5px;
 }

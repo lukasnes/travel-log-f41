@@ -8,7 +8,7 @@
     <title>Travel Log</title>
 </head>
 <body>
-    <header>
+    <header id="site-header">
         <img src="./images/globe.png" alt="Globe" class="globe-img">
         <h1>The Travel Log</h1>
         <img src="./images/globe.png" alt="Globe" class="globe-img">
@@ -18,10 +18,10 @@
         <div id="plane-container">
             <img src="./images/plane.png" alt="Airplane" id="airplane">
         </div>
-        <form id="wishlist-form">
-            <input id="wishlist-input" type="text" placeholder="Where do you want to go?">
-            <button id="wishlist-btn">Here!</button>
-        </form>
+        <div id="modal-btns-container">
+            <button id="wishlist-btn" class="btn modal-btn">Add a place to your wishlist!</button>
+            <button id="log-btn" class="btn modal-btn">Add a place you've visited!</button>
+        </div>
         <div id="section-container">
             <section id="wishlist-section" class="list-section">
                 <h2>Places I want to see</h2>
@@ -33,6 +33,10 @@
             </section>
         </div>
     </main>
+
+    <div id="modal">
+        
+    </div>
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

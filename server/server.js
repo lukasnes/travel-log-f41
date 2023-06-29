@@ -14,6 +14,7 @@ const { SERVER_PORT } = process.env
 
 
 const { 
+    getPlaces,
     addPlace
 } = require('./controller')
 
@@ -22,6 +23,7 @@ app.get('/', (req,res) => {
     rollbar.info('User visited the site!')
 })
 
+app.get('/api/place', getPlaces)
 app.post('/api/place', addPlace)
 
 app.listen(SERVER_PORT, console.log(`App running on ${SERVER_PORT}!`))
